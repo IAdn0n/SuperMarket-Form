@@ -16,6 +16,9 @@ namespace SuperMarket
         public loginForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.CenterToScreen();
+            this.Size = new Size(Constants.WIDTH, Constants.HEIGHT);
         }
 
         private string getHashSha256(string text)
@@ -51,10 +54,34 @@ namespace SuperMarket
             string userName = usernameTxtBox.Text;
             string hashedPass = getHashSha256(passwordTxtBox.Text);
 
+
+            //go into the main form
+            MainForm mainForm = new MainForm();
+
+            mainForm.Activate();
+            mainForm.Show();
+
             Hide();
-            registerForm regForm = new registerForm();
+        }
+
+        private void registerLblMouseEnter(object sender, EventArgs e)
+        {
+            RegisterLbl.ForeColor = Color.CornflowerBlue;
+            RegisterLbl.Font = new Font(RegisterLbl.Font, FontStyle.Underline);
+        }
+
+        private void registerLblMouseLeave(object sender, EventArgs e)
+        {
+            RegisterLbl.ForeColor = Color.DodgerBlue;
+            RegisterLbl.Font = new Font(RegisterLbl.Font, FontStyle.Regular);
+        }
+
+        private void registerLbl_Click(object sender, EventArgs e)
+        {
+            Hide();
+            registerForm regForm = new registerForm(this);
             regForm.Show();
-            
+            regForm.Activate();
         }
     }
 }

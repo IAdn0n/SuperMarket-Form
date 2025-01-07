@@ -2,10 +2,11 @@ C:\Dev\SuperMarket\SuperMarket\bin\Debug\SuperMarket.exe.config
 C:\Dev\SuperMarket\SuperMarket\bin\Debug\SuperMarket.exe
 C:\Dev\SuperMarket\SuperMarket\bin\Debug\SuperMarket.pdb
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.csproj.AssemblyReference.cache
-C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.loginForm.resources
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.Properties.Resources.resources
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.registerForm.resources
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.csproj.GenerateResource.cache
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.csproj.CoreCompileInputs.cache
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.exe
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.pdb
+C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.MainForm.resources
+C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.loginForm.resources
