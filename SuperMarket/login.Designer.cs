@@ -83,6 +83,8 @@
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            this.loginBtn.MouseEnter += new System.EventHandler(this.loginBtnEnter);
+            this.loginBtn.MouseLeave += new System.EventHandler(this.loginBtnLeave);
             // 
             // label3
             // 

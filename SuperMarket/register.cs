@@ -18,7 +18,7 @@ namespace SuperMarket
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.CenterToScreen();
-            this.Size = new Size(Constants.WIDTH, Constants.HEIGHT);
+            this.Size = new Size(Constants.WindowSizes.WIDTH, Constants.WindowSizes.HEIGHT);
 
 
             previousForm = previousLogin;
@@ -32,6 +32,11 @@ namespace SuperMarket
                
         private void registerBtn_Click(object sender, EventArgs e)
         {
+
+            //TODO: BASSAM DO REGISTRATION
+
+
+            //TODO: END
 
             MessageBox.Show("Registration Successful");
             //going back to login form
@@ -64,6 +69,15 @@ namespace SuperMarket
             this.Close();
         }
 
-    
+
+        //hovering over buttpn
+        private void registrationBtnEnter(object sender, EventArgs e)
+        {
+            Constants.ControlMethods.BTN_ENTER(registerBtn);
+        }
+        private void registrationBtnLeave(object sender, EventArgs e)
+        {
+            Constants.ControlMethods.BTN_LEAVE(registerBtn);
+        }
     }
 }

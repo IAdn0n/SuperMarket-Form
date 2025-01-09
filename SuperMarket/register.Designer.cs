@@ -85,6 +85,8 @@
             this.registerBtn.Text = "Register";
             this.registerBtn.UseVisualStyleBackColor = true;
             this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
+            this.registerBtn.MouseEnter += new System.EventHandler(this.registrationBtnEnter);
+            this.registerBtn.MouseLeave += new System.EventHandler(this.registrationBtnLeave);
             // 
             // label3
             // 

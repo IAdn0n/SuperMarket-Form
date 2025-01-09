@@ -18,7 +18,7 @@ namespace SuperMarket
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.CenterToScreen();
-            this.Size = new Size(Constants.WIDTH, Constants.HEIGHT);
+            this.Size = new Size(Constants.WindowSizes.WIDTH, Constants.WindowSizes.HEIGHT);
         }
 
         private string getHashSha256(string text)
@@ -55,6 +55,12 @@ namespace SuperMarket
             string hashedPass = getHashSha256(passwordTxtBox.Text);
 
 
+            //TODO: BASSAM DO THE DATABASE THING
+
+
+
+            //END TODO
+
             //go into the main form
             MainForm mainForm = new MainForm();
 
@@ -82,6 +88,16 @@ namespace SuperMarket
             registerForm regForm = new registerForm(this);
             regForm.Show();
             regForm.Activate();
+        }
+
+        //hovering over buttpn
+        private void loginBtnEnter(object sender, EventArgs e)
+        {
+            Constants.ControlMethods.BTN_ENTER(loginBtn);
+        }
+        private void loginBtnLeave(object sender, EventArgs e)
+        {
+            Constants.ControlMethods.BTN_LEAVE(loginBtn);
         }
     }
 }
