@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SuperMarket
-{
+{        
     public class Product
     {
         private string ID;

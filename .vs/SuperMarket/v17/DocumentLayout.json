@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\supermarket\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|c:\\users\\bassam_03\\downloads\\software engineering\\sweproject\\supermarket-form\\supermarket\\basketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\basketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\supermarket\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\supermarket\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\supermarket\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\supermarket\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\supermarket\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\supermarket\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\supermarket\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\supermarket\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\supermarket\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\supermarket\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{343DE89E-4A52-4E30-9C97-4E70F6625691}|SuperMarket\\SuperMarket.csproj|solutionrelative:supermarket\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 233,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\MainForm.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\MainForm.cs",
+              "ToolTip": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\MainForm.cs",
+              "RelativeToolTip": "SuperMarket\\MainForm.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAowG8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-01-10T22:17:25.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BasketForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\BasketForm.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\BasketForm.cs",
+              "ToolTip": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\BasketForm.cs [Design]",
+              "RelativeToolTip": "SuperMarket\\BasketForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T22:17:25.281Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\MainForm.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\MainForm.cs",
+              "ToolTip": "C:\\Dev\\SuperMarket\\SuperMarket\\MainForm.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Dev\\SuperMarket\\SuperMarket\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-01-10T22:17:25.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\login.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\login.cs",
+              "ToolTip": "C:\\Dev\\SuperMarket\\SuperMarket\\login.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Dev\\SuperMarket\\SuperMarket\\login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-01-10T22:17:25.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\Product.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\Product.cs",
+              "ToolTip": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\Product.cs",
+              "RelativeToolTip": "SuperMarket\\Product.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvwoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T22:17:25.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "register.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\register.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\register.cs",
+              "ToolTip": "C:\\Dev\\SuperMarket\\SuperMarket\\register.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Dev\\SuperMarket\\SuperMarket\\register.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-01-10T22:17:25.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\Class1.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\Class1.cs",
+              "ToolTip": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\Class1.cs",
+              "RelativeToolTip": "SuperMarket\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T22:17:25.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "addProduct.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\addProduct.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\addProduct.cs",
+              "ToolTip": "C:\\Dev\\SuperMarket\\SuperMarket\\addProduct.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Dev\\SuperMarket\\SuperMarket\\addProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-01-10T22:17:25.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "register.cs",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\register.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\register.cs",
+              "ToolTip": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\register.cs",
+              "RelativeToolTip": "SuperMarket\\register.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwEEAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-01-10T22:17:25.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\Constants.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\Constants.cs",
+              "ToolTip": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\Constants.cs",
+              "RelativeToolTip": "SuperMarket\\Constants.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAYwDMAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T22:17:25.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "addProduct.cs",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\addProduct.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\addProduct.cs",
+              "ToolTip": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\addProduct.cs",
+              "RelativeToolTip": "SuperMarket\\addProduct.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAuwCkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-01-10T22:17:25.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "login.cs",
+              "DocumentMoniker": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\login.cs",
+              "RelativeDocumentMoniker": "SuperMarket\\login.cs",
+              "ToolTip": "C:\\Users\\bassam_03\\Downloads\\Software Engineering\\SWEProject\\SuperMarket-Form\\SuperMarket\\login.cs",
+              "RelativeToolTip": "SuperMarket\\login.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAQwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-01-10T22:17:25.3Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 27,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{68487888-204a-11d3-87eb-00c04f7971a5}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

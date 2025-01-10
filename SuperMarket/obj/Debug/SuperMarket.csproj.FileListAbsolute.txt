@@ -12,3 +12,17 @@ C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.MainForm.resources
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.loginForm.resources
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.addProduct.resources
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.BasketForm.resources
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\bin\Debug\SuperMarket.exe.config
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\bin\Debug\SuperMarket.exe
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\bin\Debug\SuperMarket.pdb
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\obj\Debug\SuperMarket.csproj.AssemblyReference.cache
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\obj\Debug\SuperMarket.addProduct.resources
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\obj\Debug\SuperMarket.BasketForm.resources
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\obj\Debug\SuperMarket.MainForm.resources
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\obj\Debug\SuperMarket.loginForm.resources
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\obj\Debug\SuperMarket.Properties.Resources.resources
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\obj\Debug\SuperMarket.registerForm.resources
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\obj\Debug\SuperMarket.csproj.GenerateResource.cache
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\obj\Debug\SuperMarket.csproj.CoreCompileInputs.cache
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\obj\Debug\SuperMarket.exe
+C:\Users\bassam_03\Downloads\Software Engineering\SWEProject\SuperMarket-Form\SuperMarket\obj\Debug\SuperMarket.pdb
