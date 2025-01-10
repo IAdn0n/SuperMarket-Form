@@ -38,7 +38,15 @@
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.SummaryGroupBox = new System.Windows.Forms.GroupBox();
             this.itemsCounterLbl = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.subtotalLbl = new System.Windows.Forms.Label();
+            this.taxLbl = new System.Windows.Forms.Label();
+            this.totalLbl = new System.Windows.Forms.Label();
+            this.checkoutBtn = new System.Windows.Forms.Button();
             this.productsGroupBox.SuspendLayout();
+            this.SummaryGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // backBtn
@@ -124,10 +132,18 @@
             // 
             // SummaryGroupBox
             // 
+            this.SummaryGroupBox.BackColor = System.Drawing.Color.White;
+            this.SummaryGroupBox.Controls.Add(this.checkoutBtn);
+            this.SummaryGroupBox.Controls.Add(this.totalLbl);
+            this.SummaryGroupBox.Controls.Add(this.taxLbl);
+            this.SummaryGroupBox.Controls.Add(this.subtotalLbl);
+            this.SummaryGroupBox.Controls.Add(this.label5);
+            this.SummaryGroupBox.Controls.Add(this.label4);
+            this.SummaryGroupBox.Controls.Add(this.label3);
             this.SummaryGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SummaryGroupBox.Location = new System.Drawing.Point(958, 235);
             this.SummaryGroupBox.Name = "SummaryGroupBox";
-            this.SummaryGroupBox.Size = new System.Drawing.Size(400, 621);
+            this.SummaryGroupBox.Size = new System.Drawing.Size(353, 332);
             this.SummaryGroupBox.TabIndex = 14;
             this.SummaryGroupBox.TabStop = false;
             this.SummaryGroupBox.Text = "Order Summary";
@@ -140,6 +156,76 @@
             this.itemsCounterLbl.Size = new System.Drawing.Size(62, 20);
             this.itemsCounterLbl.TabIndex = 15;
             this.itemsCounterLbl.Text = "0 Items";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(30, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Subtotal:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(68, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 25);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Tax:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(58, 202);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 25);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Total:";
+            // 
+            // subtotalLbl
+            // 
+            this.subtotalLbl.AutoSize = true;
+            this.subtotalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtotalLbl.Location = new System.Drawing.Point(236, 95);
+            this.subtotalLbl.Name = "subtotalLbl";
+            this.subtotalLbl.Size = new System.Drawing.Size(34, 25);
+            this.subtotalLbl.TabIndex = 3;
+            this.subtotalLbl.Text = "10";
+            // 
+            // taxLbl
+            // 
+            this.taxLbl.AutoSize = true;
+            this.taxLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taxLbl.Location = new System.Drawing.Point(236, 147);
+            this.taxLbl.Name = "taxLbl";
+            this.taxLbl.Size = new System.Drawing.Size(34, 25);
+            this.taxLbl.TabIndex = 4;
+            this.taxLbl.Text = "10";
+            // 
+            // totalLbl
+            // 
+            this.totalLbl.AutoSize = true;
+            this.totalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLbl.Location = new System.Drawing.Point(236, 202);
+            this.totalLbl.Name = "totalLbl";
+            this.totalLbl.Size = new System.Drawing.Size(34, 25);
+            this.totalLbl.TabIndex = 5;
+            this.totalLbl.Text = "10";
+            // 
+            // checkoutBtn
+            // 
+            this.checkoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutBtn.Location = new System.Drawing.Point(35, 260);
+            this.checkoutBtn.Name = "checkoutBtn";
+            this.checkoutBtn.Size = new System.Drawing.Size(260, 42);
+            this.checkoutBtn.TabIndex = 6;
+            this.checkoutBtn.Text = "Continue Checkout";
+            this.checkoutBtn.UseVisualStyleBackColor = true;
             // 
             // BasketForm
             // 
@@ -160,6 +246,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Basket";
             this.productsGroupBox.ResumeLayout(false);
+            this.SummaryGroupBox.ResumeLayout(false);
+            this.SummaryGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +265,12 @@
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.GroupBox SummaryGroupBox;
         private System.Windows.Forms.Label itemsCounterLbl;
+        private System.Windows.Forms.Button checkoutBtn;
+        private System.Windows.Forms.Label totalLbl;
+        private System.Windows.Forms.Label taxLbl;
+        private System.Windows.Forms.Label subtotalLbl;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -12,9 +12,15 @@ namespace SuperMarket
 {
     public partial class BasketForm : Form
     {
-        public BasketForm()
+        private Form previousForm;
+        public BasketForm(Form prev)
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.CenterToScreen();
+            this.Size = new Size(Constants.WindowSizes.WIDTH, Constants.WindowSizes.HEIGHT);
+
+            this.previousForm = prev;
         }
     }
 }

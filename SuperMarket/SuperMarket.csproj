@@ -52,7 +52,7 @@
     <Compile Include="addProduct.Designer.cs">
       <DependentUpon>addProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Basket.cs" />
     <Compile Include="BasketForm.cs">
       <SubType>Form</SubType>
     </Compile>
