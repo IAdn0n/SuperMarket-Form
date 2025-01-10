@@ -32,6 +32,7 @@ namespace SuperMarket
             gp.Height = Constants.ProductSizes.HEIGHT;
             gp.BackColor = Color.White;
             gp.Text = p.name;
+            gp.Name = p.ID;
             gp.Font = new Font("", Constants.ProductSizes.FONT_SIZE, FontStyle.Bold);
 
             //creating price label

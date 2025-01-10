@@ -62,7 +62,7 @@ namespace SuperMarket
             //END TODO
 
             //go into the main form
-            MainForm mainForm = new MainForm();
+            MainForm mainForm = new MainForm(this);
 
             mainForm.Activate();
             mainForm.Show();
@@ -88,6 +88,7 @@ namespace SuperMarket
             registerForm regForm = new registerForm(this);
             regForm.Show();
             regForm.Activate();
+            
         }
 
         //hovering over buttpn

@@ -79,5 +79,10 @@ namespace SuperMarket
         {
             Constants.ControlMethods.BTN_LEAVE(registerBtn);
         }
+
+        private void registerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            previousForm.Close();
+        }
     }
 }
