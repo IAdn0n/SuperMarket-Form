@@ -50,8 +50,8 @@
             this.BasketBtn.Text = "Basket";
             this.BasketBtn.UseVisualStyleBackColor = true;
             this.BasketBtn.Click += new System.EventHandler(this.BasketBtn_Click);
-            this.BasketBtn.MouseEnter += new System.EventHandler(this.BasketBtnEnter);
-            this.BasketBtn.MouseLeave += new System.EventHandler(this.BasketBtnLeave);
+            this.BasketBtn.MouseEnter += new System.EventHandler(this.BtnEnter);
+            this.BasketBtn.MouseLeave += new System.EventHandler(this.BtnLeave);
             // 
             // ShopBtn
             // 
@@ -62,8 +62,8 @@
             this.ShopBtn.TabIndex = 1;
             this.ShopBtn.Text = "Shop";
             this.ShopBtn.UseVisualStyleBackColor = true;
-            this.ShopBtn.MouseEnter += new System.EventHandler(this.shopBtnEnter);
-            this.ShopBtn.MouseLeave += new System.EventHandler(this.shopBtnLeave);
+            this.ShopBtn.MouseEnter += new System.EventHandler(this.BtnEnter);
+            this.ShopBtn.MouseLeave += new System.EventHandler(this.BtnLeave);
             // 
             // ProfileBtn
             // 
@@ -78,8 +78,8 @@
             this.ProfileBtn.TabIndex = 2;
             this.ProfileBtn.Text = "Profile";
             this.ProfileBtn.UseVisualStyleBackColor = false;
-            this.ProfileBtn.MouseEnter += new System.EventHandler(this.profileBtnEnter);
-            this.ProfileBtn.MouseLeave += new System.EventHandler(this.profileBtnLeave);
+            this.ProfileBtn.MouseEnter += new System.EventHandler(this.BtnEnter);
+            this.ProfileBtn.MouseLeave += new System.EventHandler(this.BtnLeave);
             // 
             // label1
             // 

@@ -13,6 +13,7 @@ namespace SuperMarket
     public partial class registerForm : Form
     {
         private Form previousForm;
+        private bool toLogin = false;
         public registerForm(Form previousLogin)
         {
             InitializeComponent();
@@ -40,9 +41,9 @@ namespace SuperMarket
 
             MessageBox.Show("Registration Successful");
             //going back to login form
-            Hide();
-            previousForm.Activate();
-            previousForm.Show();
+            this.Hide();
+            this.previousForm.Activate();
+            this.previousForm.Show();
 
             this.Close();
         }
@@ -62,11 +63,13 @@ namespace SuperMarket
 
         private void loginlbl_click(object sender, EventArgs e)
         {
-            Hide();
-            previousForm.Activate();
-            previousForm.Show();
+            toLogin = true;
+            this.Hide();
+            this.previousForm.Activate();
+            this.previousForm.Show();
 
             this.Close();
+            
         }
 
 
@@ -82,7 +85,7 @@ namespace SuperMarket
 
         private void registerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            previousForm.Close();
+            if (!toLogin) previousForm.Close();
         }
     }
 }

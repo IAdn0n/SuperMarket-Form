@@ -15,13 +15,16 @@ namespace SuperMarket
         private string ID;
         private string name;
         private double price;
+        private int quantity;
         private string imagePath;
 
-        public Product(string ID, string name, double price)
+        public Product(string ID, string name, double price, int quantity, string imagePath)
         {   
             this.ID = ID;
             this.name = name;
             this.price = price;
+            this.quantity = quantity;
+            this.imagePath = imagePath;
         }
 
         public static GroupBox addProduct(Product p, int x, int y)
@@ -47,7 +50,7 @@ namespace SuperMarket
 
             //creating image
             PictureBox picture = new PictureBox();
-            picture.ImageLocation = "Milk.jpg";
+            picture.ImageLocation = p.imagePath;
             picture.Width = Constants.ProductSizes.IMAGE_WIDTH;
             picture.Height = Constants.ProductSizes.IMAGE_HEIGHT;
             picture.Location = new Point(Constants.ProductSizes.IMAGE_X, Constants.ProductSizes.IMAGE_Y);
@@ -63,7 +66,7 @@ namespace SuperMarket
         public string getID() { return ID; }
         public string getName() { return name; }
         public double getPrice() { return price; }
-        public string getImagePath() { return imagePath;
-        }
+        public string getImagePath() { return imagePath;}
+        public int getQuantity() { return quantity; }
     }
 }

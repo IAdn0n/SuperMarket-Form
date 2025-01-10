@@ -48,6 +48,12 @@ namespace SuperMarket
                 hoverBtn.BackColor = Color.Transparent;
                 hoverBtn.ForeColor = Color.Black;
             }
+
+            public static void BTN_ENTER_COLOR(Button hoverBtn, Color c)
+            {
+                hoverBtn.BackColor = c;
+                hoverBtn.ForeColor = Color.Black;
+            }
         }
 
     }

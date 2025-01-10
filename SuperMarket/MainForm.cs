@@ -8,12 +8,14 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.ComponentModel.Com2Interop;
 
 namespace SuperMarket
 {
     public partial class MainForm : Form
     {
         private Form previousForm;
+        private Product[] pds = new Product[20];
         public MainForm(Form prev)
         {
             InitializeComponent();
@@ -39,11 +41,11 @@ namespace SuperMarket
         {
 
             //FOR TESTING PURPOSES
-            Product [] pds = new Product[20];
+ 
 
             for (int i = 0; i < 20; i++)
             {
-                pds[i] = new Product(i.ToString(), "Milk", 0.99);
+                pds[i] = new Product(i.ToString(), "Milk", 0.99,102, "Milk.jpg");
             }
 
             // END TESTING
@@ -64,10 +66,13 @@ namespace SuperMarket
 
                 gb.MouseEnter += productMouseEnter;
                 gb.MouseLeave += productMouseLeave;
+
+                gb.Click += productClicked;
                 foreach (Control c in gb.Controls)
                 {
                     c.MouseEnter += parentProductMouseEnter;
                     c.MouseLeave += parentProductMouseLeave;
+                    c.Click += parentProductClicked;
                 }
                 
                 this.Controls.Add(gb);
@@ -90,32 +95,16 @@ namespace SuperMarket
 
 
 
-        //for shop btn changing colors
-        private void shopBtnEnter(object sender, EventArgs e)
+        //for btnس changing colors
+        private void BtnEnter(object sender, EventArgs e)
         {
-            Constants.ControlMethods.BTN_ENTER(ShopBtn);
+            Button btn = (Button)sender;
+            Constants.ControlMethods.BTN_ENTER(btn);
         }
-        private void shopBtnLeave(Object sender, EventArgs e)
+        private void BtnLeave(object sender, EventArgs e)
         {
-            Constants.ControlMethods.BTN_LEAVE(ShopBtn);
-        }
-        //for profile btn changing color
-        private void profileBtnEnter(object sender, EventArgs e)
-        {
-            Constants.ControlMethods.BTN_ENTER(ProfileBtn);
-        }
-        private void profileBtnLeave(Object sender, EventArgs e)
-        {
-            Constants.ControlMethods.BTN_LEAVE(ProfileBtn);
-        }
-        //for basket btn changing color
-        private void BasketBtnEnter(object sender, EventArgs e)
-        {
-            Constants.ControlMethods.BTN_ENTER(BasketBtn);
-        }
-        private void BasketBtnLeave(object sender, EventArgs e)
-        {
-            Constants.ControlMethods.BTN_LEAVE(BasketBtn);
+            Button btn = (Button)sender;
+            Constants.ControlMethods.BTN_LEAVE(btn);
         }
 
         //for product hovering
@@ -152,6 +141,22 @@ namespace SuperMarket
             control.Parent.ForeColor= Color.Black;
             foreach (Control c in control.Parent.Controls)
                 c.ForeColor = Color.ForestGreen;
+        }
+
+        //clicked product
+        private void productClicked(object sender, EventArgs e)
+        {
+            Control c = sender as Control;
+            addProduct productForm = new addProduct(pds[int.Parse(c.Name)]);
+
+            productForm.Show();
+        }
+        private void parentProductClicked(object sender, EventArgs e)
+        {
+            Control c = (sender as Control).Parent;
+            addProduct productForm = new addProduct(pds[int.Parse(c.Name)]);
+
+            productForm.Show();
         }
 
 
