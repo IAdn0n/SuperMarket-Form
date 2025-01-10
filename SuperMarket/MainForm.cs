@@ -16,6 +16,8 @@ namespace SuperMarket
     {
         private Form previousForm;
         private Product[] pds = new Product[20];
+
+        private bool backToLogin = false;
         public MainForm(Form prev)
         {
             InitializeComponent();
@@ -106,6 +108,11 @@ namespace SuperMarket
             Button btn = (Button)sender;
             Constants.ControlMethods.BTN_LEAVE(btn);
         }
+        private void BtnEnterRed(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            Constants.ControlMethods.BTN_ENTER_COLOR(btn, Color.LightCoral);
+        }
 
         //for product hovering
         //for mouse Entering
@@ -159,11 +166,19 @@ namespace SuperMarket
             productForm.Show();
         }
 
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            previousForm.Activate();
+            previousForm.Show();
+            backToLogin = true;
+            this.Close();
+        }
+
 
         // close everything
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            previousForm.Close();
+            if (!backToLogin) previousForm.Close();
         }
 
 
@@ -173,6 +188,7 @@ namespace SuperMarket
         {
             Console.WriteLine("TEST");
         }
+
 
         //end testing
     }
