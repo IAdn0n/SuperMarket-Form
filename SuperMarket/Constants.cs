@@ -23,7 +23,7 @@ namespace SuperMarket
             public static int PADDING_Y = 50;
             public static int START_X = 20;
             public static int START_Y = 16;
-            public static int FONT_SIZE = 14;
+            public static int FONT_SIZE = 10;
 
             public static int IMAGE_WIDTH = 120;
             public static int IMAGE_HEIGHT = 90;
@@ -31,7 +31,7 @@ namespace SuperMarket
             public static int IMAGE_Y = 31;
 
 
-            public static int PRICE_X = 65;
+            public static int PRICE_X = 75;
             public static int PRICE_Y = 0;
             
         }

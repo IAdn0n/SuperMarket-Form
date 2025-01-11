@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,8 @@ namespace SuperMarket
     {
         private Form previousForm;
         private Basket basket;
+
+        private string filePath = "ProductsFile.txt";
 
         //TEMPORARY***********
         private Product[] pds = new Product[20];
@@ -75,10 +78,26 @@ namespace SuperMarket
             // END TESTING
 
 
+            //tring to open file
+            StreamReader file;
+            try
+            {
+                file = File.OpenText(filePath);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                this.Close();
+                return;
+            }
+
+            int size = int.Parse(file.ReadLine());
             //adding products;
             int lastY = 0;
-            for (int i = 1; i <= 20; i++)
+            for (int i = 1; i <= size; i++)
             {
+                string[] words = file.ReadLine().Split(',');
+                
                 int xi = ((i % 5 == 0) ? 5 : i % 5);
                 int x = Constants.ProductSizes.START_X;
                 x += Constants.ProductSizes.PADDING_X * (xi - 1) + Constants.ProductSizes.WIDTH * (xi - 1);
@@ -87,7 +106,8 @@ namespace SuperMarket
                 int y = Constants.ProductSizes.START_Y;
                 y += Constants.ProductSizes.PADDING_Y * (yi-1) + Constants.ProductSizes.HEIGHT * (yi - 1);
 
-                GroupBox gb = Product.addProduct(pds[i-1], x, y);
+                Product p = new Product(words[0], words[1], double.Parse(words[2]), int.Parse(words[3]), words[4]);
+                GroupBox gb = Product.addProduct(p, x, y);
 
                 gb.MouseEnter += productMouseEnter;
                 gb.MouseLeave += productMouseLeave;

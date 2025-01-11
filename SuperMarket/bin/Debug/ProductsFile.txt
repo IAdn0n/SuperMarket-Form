@@ -1,0 +1,5 @@
+4
+1,Milk,0.99,105,Milk.jpg
+2,Yogurt,1.49,205,Yogurt.jpg
+3,Butter,0.79,71,Butter.jpg
+4,Eggs,2.29,32,Eggs.jpg
