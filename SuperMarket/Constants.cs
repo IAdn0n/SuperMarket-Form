@@ -19,10 +19,10 @@ namespace SuperMarket
         {
             public static int WIDTH = 133;
             public static int HEIGHT = 131;
-            public static int PADDING_X = 50;
+            public static int PADDING_X = 30;
             public static int PADDING_Y = 50;
-            public static int START_X = 33;
-            public static int START_Y = 161;
+            public static int START_X = 20;
+            public static int START_Y = 16;
             public static int FONT_SIZE = 14;
 
             public static int IMAGE_WIDTH = 120;
@@ -53,6 +53,41 @@ namespace SuperMarket
             {
                 hoverBtn.BackColor = c;
                 hoverBtn.ForeColor = Color.Black;
+            }
+        }
+
+        internal static class BasketMethods
+        {
+            public static int PRODUCT_X = 8;
+            public static int PRODUCT_Y = 18;
+            public static int PRODUCT_WIDTH = 510;
+            public static int PRODUCT_HEIGHT = 95;
+            public static int PRODUCT_FONT_SIZE = 12;
+
+            public static int PRODUCT_PICTURE_X = 10;
+            public static int PRODUCT_PICTURE_Y = 16;
+            public static int PRODUCT_PICTURE_WIDTH = 72;
+            public static int PRODUCT_PICTURE_HEIGHT = 68;
+
+            public static int PRODUCT_NAME_X = 86;
+            public static int PRODUCT_NAME_Y = 14;
+
+            public static int PRODUCT_PRICE_X = 86;
+            public static int PRODUCT_PRICE_Y = 36;
+
+            public static int PRODUCT_QUANTITY_X = 86;
+            public static int PRODUCT_QUANTITY_Y = 66;
+
+            public static int PRODUCT_TOTAL_PRICE_X = 436;
+            public static int PRODUCT_TOTAL_PRICE_Y = 66;
+
+            public static int PRODUCT_CANCEL_BTN_X = 480;
+            public static int PRODUCT_CANCEL_BTN_Y = 8;
+            public static int PRODUCT_CANCEL_BTN_WIDTH = 24;
+            public static int PRODUCT_CANCEL_BTN_HEIGHT = 19;
+            public static void CHANGE_TEXT(Button basketBtn, int num)
+            {
+                basketBtn.Text = "Basket (" + num.ToString() + ')';
             }
         }
 

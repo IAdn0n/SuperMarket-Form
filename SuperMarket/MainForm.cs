@@ -15,7 +15,11 @@ namespace SuperMarket
     public partial class MainForm : Form
     {
         private Form previousForm;
+        private Basket basket;
+
+        //TEMPORARY***********
         private Product[] pds = new Product[20];
+        //
 
         private bool backToLogin = false;
         public MainForm(Form prev)
@@ -26,24 +30,42 @@ namespace SuperMarket
             this.Size = new Size(Constants.WindowSizes.WIDTH, Constants.WindowSizes.HEIGHT);
 
             this.previousForm = prev;
+
+
+            basket = new Basket();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            AddProducts();
+            refreshForm();
+            AddProductsIntoForm();
+
+        }
+
+        public void refreshForm()
+        {
+            //updating the number on basket btn
+            Constants.BasketMethods.CHANGE_TEXT(BasketBtn, basket.Size());
         }
 
         private void BasketBtn_Click(object sender, EventArgs e)
         {
+
+            BasketForm basketForm = new BasketForm(this, basket);
+            this.Hide();
+            
+            basketForm.Activate();
+            basketForm.Show();
         }
 
 
         //adding a product;
-        private void AddProducts()
+        private void AddProductsIntoForm()
         {
 
             //FOR TESTING PURPOSES
- 
+            //*****temporary ****
+            //product data should be fetched from DB
 
             for (int i = 0; i < 20; i++)
             {
@@ -58,7 +80,8 @@ namespace SuperMarket
             for (int i = 1; i <= 20; i++)
             {
                 int xi = ((i % 5 == 0) ? 5 : i % 5);
-                int x = Constants.ProductSizes.START_X * xi + Constants.ProductSizes.WIDTH * (xi - 1);
+                int x = Constants.ProductSizes.START_X;
+                x += Constants.ProductSizes.PADDING_X * (xi - 1) + Constants.ProductSizes.WIDTH * (xi - 1);
                 
                 int yi = (int)(Math.Ceiling((decimal)i / 5));
                 int y = Constants.ProductSizes.START_Y;
@@ -77,7 +100,7 @@ namespace SuperMarket
                     c.Click += parentProductClicked;
                 }
                 
-                this.Controls.Add(gb);
+                this.productsPanel.Controls.Add(gb);
                 
                 Console.WriteLine(x + " " + y);
 
@@ -87,17 +110,31 @@ namespace SuperMarket
             //for extra padding
             Panel ignore = new Panel();
             ignore.Location = new Point(0, lastY + Constants.ProductSizes.HEIGHT);
-            this.Controls.Add(ignore);
+            this.productsPanel.Controls.Add(ignore);
             
 
             Console.WriteLine("Products loaded successfully");
-        }  
-        
+        }
+
+
+        //clicked product
+        private void productClicked(object sender, EventArgs e)
+        {
+            Control c = sender as Control;
+            addProduct productForm = new addProduct(pds[int.Parse(c.Name)], basket);
+
+            //redraw the form after dialog completion
+            if (productForm.ShowDialog() == DialogResult.Cancel)
+                refreshForm();
+        }
+        private void parentProductClicked(object sender, EventArgs e)
+        {
+            productClicked((sender as Control).Parent, e);
+        }
 
 
 
-
-        //for btnس changing colors
+        //for btn changing colors when hovering
         private void BtnEnter(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -150,21 +187,6 @@ namespace SuperMarket
                 c.ForeColor = Color.ForestGreen;
         }
 
-        //clicked product
-        private void productClicked(object sender, EventArgs e)
-        {
-            Control c = sender as Control;
-            addProduct productForm = new addProduct(pds[int.Parse(c.Name)]);
-
-            productForm.Show();
-        }
-        private void parentProductClicked(object sender, EventArgs e)
-        {
-            Control c = (sender as Control).Parent;
-            addProduct productForm = new addProduct(pds[int.Parse(c.Name)]);
-
-            productForm.Show();
-        }
 
         private void LogoutBtn_Click(object sender, EventArgs e)
         {
@@ -181,15 +203,5 @@ namespace SuperMarket
             if (!backToLogin) previousForm.Close();
         }
 
-
-        //testing purposes
-
-        private void TEST(object sender, EventArgs e)
-        {
-            Console.WriteLine("TEST");
-        }
-
-
-        //end testing
     }
 }

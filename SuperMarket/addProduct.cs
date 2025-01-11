@@ -13,18 +13,20 @@ namespace SuperMarket
     public partial class addProduct : Form
     {
         Product product;
+        Basket basket;
         int quantity;
-        public addProduct(Product product)
+        public addProduct(Product product, Basket basket)
         {
             InitializeComponent();
             this.product = product;
+            this.basket = basket;
             this.quantity = 1;
         }
 
         private void addProduct_Load(object sender, EventArgs e)
         {
             productNameLbl.Text = product.getName();
-            productPriceLbl.Text = product.getPrice().ToString() + '$';
+            productPriceLbl.Text = '$' + product.getPrice().ToString();
             TotalLbl.Text = productPriceLbl.Text;
             productPictureBox.ImageLocation = product.getImagePath();
         }
@@ -36,7 +38,7 @@ namespace SuperMarket
             quantity++;
             quantityLbl.Text = (quantity < 10) ? "0" + quantity.ToString() : quantity.ToString();
 
-            TotalLbl.Text = (product.getPrice() * quantity).ToString() + '$';
+            TotalLbl.Text = '$' + (product.getPrice() * quantity).ToString();
 
             if (quantity == product.getQuantity() || quantity == 99)
                 incrementbtn.Enabled = false;
@@ -51,12 +53,23 @@ namespace SuperMarket
             quantity--;
             quantityLbl.Text = (quantity < 10) ? "0" + quantity.ToString() : quantity.ToString();
 
-            TotalLbl.Text = (product.getPrice() * quantity).ToString() + '$';
+            TotalLbl.Text = '$' + (product.getPrice() * quantity).ToString();
 
             if (quantity == 1)
                 decrementBtn.Enabled = false;
             if (quantity < product.getQuantity() && quantity < 99) 
                 incrementbtn.Enabled = true;
+        }
+
+        //confirming --> addding products into basket
+        private void addProductIntoBasket(object sender, EventArgs e)
+        {
+            Product added = product;
+            added.setQuantity(this.quantity);
+            basket.add(added);
+
+            Console.WriteLine("Product added into basket");
+            this.Close();
         }
 
 

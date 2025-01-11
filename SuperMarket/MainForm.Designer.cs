@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LogoutBtn = new System.Windows.Forms.Button();
+            this.productsPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // BasketBtn
@@ -43,7 +44,7 @@
             this.BasketBtn.Name = "BasketBtn";
             this.BasketBtn.Size = new System.Drawing.Size(155, 71);
             this.BasketBtn.TabIndex = 0;
-            this.BasketBtn.Text = "Basket";
+            this.BasketBtn.Text = "Basket (0)";
             this.BasketBtn.UseVisualStyleBackColor = true;
             this.BasketBtn.Click += new System.EventHandler(this.BasketBtn_Click);
             this.BasketBtn.MouseEnter += new System.EventHandler(this.BtnEnter);
@@ -110,6 +111,14 @@
             this.LogoutBtn.MouseEnter += new System.EventHandler(this.BtnEnterRed);
             this.LogoutBtn.MouseLeave += new System.EventHandler(this.BtnLeave);
             // 
+            // productsPanel
+            // 
+            this.productsPanel.AutoScroll = true;
+            this.productsPanel.Location = new System.Drawing.Point(54, 235);
+            this.productsPanel.Name = "productsPanel";
+            this.productsPanel.Size = new System.Drawing.Size(1314, 655);
+            this.productsPanel.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -117,6 +126,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1410, 922);
+            this.Controls.Add(this.productsPanel);
             this.Controls.Add(this.LogoutBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -141,5 +151,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button LogoutBtn;
+        private System.Windows.Forms.Panel productsPanel;
     }
 }

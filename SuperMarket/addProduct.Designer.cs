@@ -135,6 +135,7 @@
             this.confirmBtn.TabIndex = 7;
             this.confirmBtn.Text = "Confirm";
             this.confirmBtn.UseVisualStyleBackColor = true;
+            this.confirmBtn.Click += new System.EventHandler(this.addProductIntoBasket);
             this.confirmBtn.MouseEnter += new System.EventHandler(this.BtnEnterGreen);
             this.confirmBtn.MouseLeave += new System.EventHandler(this.BtnLeave);
             // 

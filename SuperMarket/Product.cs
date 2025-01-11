@@ -40,7 +40,7 @@ namespace SuperMarket
 
             //creating price label
             Label price = new Label();
-            price.Text = p.price.ToString() + "$";
+            price.Text = '$' + p.price.ToString();
             price.Location = new Point(Constants.ProductSizes.PRICE_X, Constants.ProductSizes.PRICE_Y);
             price.ForeColor = Color.ForestGreen;
             price.Font = new Font("", Constants.ProductSizes.FONT_SIZE, FontStyle.Bold);
@@ -68,5 +68,7 @@ namespace SuperMarket
         public double getPrice() { return price; }
         public string getImagePath() { return imagePath;}
         public int getQuantity() { return quantity; }
+
+        public void setQuantity(int quantity) { this.quantity = quantity;}
     }
 }

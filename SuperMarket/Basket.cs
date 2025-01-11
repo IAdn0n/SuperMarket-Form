@@ -22,6 +22,16 @@ namespace SuperMarket
             totalPrice += (p.getPrice() * p.getQuantity());
         }
 
+        public void remove(int index)
+        {
+            totalPrice -= ((products[index] as Product).getPrice() * (products[index] as Product).getQuantity());
+            products.RemoveAt(index);
+
+            Console.WriteLine("REMOVE SIZE: " + Size().ToString());
+        }
+
         public int Size() { return  products.Count; }
+        public double getTotalPrice() { return totalPrice;}
+        public ArrayList getProducts() { return products;}
     }
 }
