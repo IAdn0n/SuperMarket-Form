@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace SuperMarket
 {
     public partial class loginForm : Form
     {
+        private const string filePath = "UsersFile.txt";
         public loginForm()
         {
             InitializeComponent();
@@ -55,13 +57,36 @@ namespace SuperMarket
             string hashedPass = getHashSha256(passwordTxtBox.Text);
 
 
-            //TODO: BASSAM DO THE DATABASE THING
+            //TODO: BASSAM DO THE DATABASE CONNECTION
+            StreamReader file = File.OpenText(filePath);
 
-
+            bool foundUser = false;
+            while(!file.EndOfStream)
+            {
+                string [] info = file.ReadLine().Split(',');
+                
+                if (info[1] == userName)
+                {
+                    foundUser = true;
+                    if (info[2] == hashedPass)
+                        openMainForm();
+                    else
+                        MessageBox.Show("Wrong Password");
+                    file.Close();
+                    return;
+                }
+            }
+            if (!foundUser)
+                MessageBox.Show("User Not Found");
+            file.Close();
 
             //END TODO
+        }
 
-            //go into the main form
+        private void openMainForm()
+        {
+            Console.WriteLine("login successful");
+
             MainForm mainForm = new MainForm(this);
 
             mainForm.Activate();
