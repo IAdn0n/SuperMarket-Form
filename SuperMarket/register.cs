@@ -69,54 +69,87 @@ namespace SuperMarket
             }
             
             
-            string userName = usernameTxtBox.Text;
-            string password = passwordTxtBox.Text;
+            string userName = usernameTxtBox.Text.Trim();
+            string password = passwordTxtBox.Text.Trim();
 
             //if confirm password does not match password;
-            if (password != confirmPasswordTxtBox.Text)
+            if (password != confirmPasswordTxtBox.Text.Trim())
             {
                 MessageBox.Show("Passwords Do Not Match");
                 return;
             }
+            //check UserName
+            if (!checkUserName(userName))
+            {
+                MessageBox.Show("Username length must be less than 20\nand not contain ( , | . | whiteSpace | \' | \" | \\ )");
 
+            }
+            
+
+            //hashing password
             password = getHashSha256(password);
 
             //opening a users file
             StreamReader file;
-            try
-            {
+            try {
                 file = File.OpenText(filePath);
-            }
-            catch(Exception ex) {
-                MessageBox.Show(ex.Message);
-                return;
-            }
+            }catch (Exception ex) { MessageBox.Show(ex.Message); return; }
 
             //next user id   **Sequential ID**
-            int nextID = int.Parse(file.ReadLine()) + 1;
+            int nextID = Constants.FileMethods.GetFileSize(filePath) + 1;
 
-
-            //TODO: BASSAM DO REGISTRATION
-         
-
-
-            //TODO: END
-
-
+            //checking if username already exist
+            while (!file.EndOfStream)
+            {
+                string user = file.ReadLine().Split(',')[1];
+                if (userName == user)
+                {
+                    MessageBox.Show("Username already exist. try a new one");
+                    file.Close();
+                    return;
+                }
+            }
             file.Close();
+
+
+            //writing users to file mechanism
+            StreamWriter writer;
+            try{
+                writer = File.AppendText(filePath);
+            }catch(Exception ex) { MessageBox.Show(ex.Message) ; return; }
+
+            //appending new user
+            writer.WriteLine(nextID.ToString() + ',' + userName + ',' + password);
+            writer.Close();
+
+
+
 
             MessageBox.Show("Registration Successful");
             //going back to login form
             this.Hide();
             this.previousForm.Activate();
             this.previousForm.Show();
-
+            
+            toLogin = true;
             this.Close();
         }
 
         private bool checkTextBox(TextBox textBox)
         {
             return (textBox.Text == String.Empty)? false : true;
+        }
+        private bool checkUserName(string user)
+        {
+            //return code 1
+            if (user.Length > 20) return false;
+            foreach (char c in user)
+            {
+                if (c == ',' || c == ' ' || c == '.' || c == '\\' || c == '\"' || c == '\'' || c == '\"') return false;
+            }
+
+            //everything fine
+            return true;
         }
 
         //properties for going back to login in
