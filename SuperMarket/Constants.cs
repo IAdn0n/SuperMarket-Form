@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -88,6 +89,19 @@ namespace SuperMarket
             public static void CHANGE_TEXT(Button basketBtn, int num)
             {
                 basketBtn.Text = "Basket (" + num.ToString() + ')';
+            }
+        }
+
+        internal static class FileMethods
+        {
+            public static int GetFileSize(string filePath)
+            {
+                int lineCount = 0;
+                using (var reader = File.OpenText(filePath)) 
+                    while (reader.ReadLine() != null)
+                        lineCount++;
+                    
+                return lineCount;
             }
         }
 
