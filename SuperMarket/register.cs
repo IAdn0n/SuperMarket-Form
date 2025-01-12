@@ -82,7 +82,7 @@ namespace SuperMarket
             if (!checkUserName(userName))
             {
                 MessageBox.Show("Username length must be less than 20\nand not contain ( , | . | whiteSpace | \' | \" | \\ )");
-
+                return;
             }
             
 
@@ -141,7 +141,6 @@ namespace SuperMarket
         }
         private bool checkUserName(string user)
         {
-            //return code 1
             if (user.Length > 20) return false;
             foreach (char c in user)
             {
@@ -152,19 +151,20 @@ namespace SuperMarket
             return true;
         }
 
-        //properties for going back to login in
-        private void loginLblMouseEnter(object sender, EventArgs e)
+        //label hovering
+        private void LblEnter(object sender, EventArgs e)
         {
-            loginLbl.ForeColor = Color.CornflowerBlue;
-            loginLbl.Font = new Font(loginLbl.Font, FontStyle.Underline);
+            Label lbl = sender as Label;
+            lbl.ForeColor = Color.CornflowerBlue;
+            lbl.Font = new Font(loginLbl.Font, FontStyle.Underline);
         }
 
-        private void loginLblMouseLeave(object sender, EventArgs e)
+        private void LblLeave(object sender, EventArgs e)
         {
-            loginLbl.ForeColor = Color.DodgerBlue;
-            loginLbl.Font = new Font(loginLbl.Font, FontStyle.Regular);
+            Label lbl = sender as Label;
+            lbl.ForeColor = Color.DodgerBlue;
+            lbl.Font = new Font(loginLbl.Font, FontStyle.Regular);
         }
-
         private void loginlbl_click(object sender, EventArgs e)
         {
             toLogin = true;
