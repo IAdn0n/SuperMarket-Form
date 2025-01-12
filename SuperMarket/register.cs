@@ -123,8 +123,6 @@ namespace SuperMarket
             writer.Close();
 
 
-
-
             MessageBox.Show("Registration Successful");
             //going back to login form
             this.Hide();
@@ -156,14 +154,14 @@ namespace SuperMarket
         {
             Label lbl = sender as Label;
             lbl.ForeColor = Color.CornflowerBlue;
-            lbl.Font = new Font(loginLbl.Font, FontStyle.Underline);
+            lbl.Font = new Font(lbl.Font, FontStyle.Underline);
         }
 
         private void LblLeave(object sender, EventArgs e)
         {
             Label lbl = sender as Label;
             lbl.ForeColor = Color.DodgerBlue;
-            lbl.Font = new Font(loginLbl.Font, FontStyle.Regular);
+            lbl.Font = new Font(lbl.Font, FontStyle.Regular);
         }
         private void loginlbl_click(object sender, EventArgs e)
         {

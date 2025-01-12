@@ -70,18 +70,21 @@ namespace SuperMarket
             Hide();
         }
 
-        private void registerLblMouseEnter(object sender, EventArgs e)
+
+        //label hovering
+        private void LblEnter(object sender, EventArgs e)
         {
-            RegisterLbl.ForeColor = Color.CornflowerBlue;
-            RegisterLbl.Font = new Font(RegisterLbl.Font, FontStyle.Underline);
+            Label lbl = sender as Label;
+            lbl.ForeColor = Color.CornflowerBlue;
+            lbl.Font = new Font(lbl.Font, FontStyle.Underline);
         }
 
-        private void registerLblMouseLeave(object sender, EventArgs e)
+        private void LblLeave(object sender, EventArgs e)
         {
-            RegisterLbl.ForeColor = Color.DodgerBlue;
-            RegisterLbl.Font = new Font(RegisterLbl.Font, FontStyle.Regular);
+            Label lbl = sender as Label;
+            lbl.ForeColor = Color.DodgerBlue;
+            lbl.Font = new Font(lbl.Font, FontStyle.Regular);
         }
-
         private void registerLbl_Click(object sender, EventArgs e)
         {
             Hide();
