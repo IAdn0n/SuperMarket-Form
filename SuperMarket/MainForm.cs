@@ -18,7 +18,7 @@ namespace SuperMarket
         private Form previousForm;
         private Basket basket;
 
-        private string filePath = "ProductsFile.txt";
+        private const string filePath = "ProductsFile.txt";
 
         //TEMPORARY***********
         private Product[] pds = new Product[20];
@@ -126,7 +126,11 @@ namespace SuperMarket
 
                 lastY = y;
             }
-            
+
+            //close the file
+            file.Close();
+
+
             //for extra padding
             Panel ignore = new Panel();
             ignore.Location = new Point(0, lastY + Constants.ProductSizes.HEIGHT);
