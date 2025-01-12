@@ -141,7 +141,10 @@ namespace SuperMarket
         private void productClicked(object sender, EventArgs e)
         {
             Control c = sender as Control;
-            addProduct productForm = new addProduct(pds[int.Parse(c.Name)], basket);
+            //fetching product's information
+            int id = int.Parse(c.Name);
+            string[] words = File.ReadLines(filePath).Skip(id).Take(1).First().Split(',');
+            addProduct productForm = new addProduct(new Product(words[0], words[1], double.Parse(words[2]), int.Parse(words[3]), words[4]),  basket);
 
             //redraw the form after dialog completion
             if (productForm.ShowDialog() == DialogResult.Cancel)
