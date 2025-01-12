@@ -105,8 +105,8 @@
             this.RegisterLbl.TabIndex = 6;
             this.RegisterLbl.Text = "Register";
             this.RegisterLbl.Click += new System.EventHandler(this.registerLbl_Click);
-            this.RegisterLbl.MouseEnter += new System.EventHandler(this.registerLblMouseEnter);
-            this.RegisterLbl.MouseLeave += new System.EventHandler(this.registerLblMouseLeave);
+            this.RegisterLbl.MouseEnter += new System.EventHandler(this.LblEnter);
+            this.RegisterLbl.MouseLeave += new System.EventHandler(this.LblLeave);
             // 
             // loginForm
             // 
