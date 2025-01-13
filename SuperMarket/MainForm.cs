@@ -56,7 +56,7 @@ namespace SuperMarket
         private void BasketBtn_Click(object sender, EventArgs e)
         {
 
-            BasketForm basketForm = new BasketForm(this, basket);
+            BasketForm basketForm = new BasketForm(this, basket, user);
             this.Hide();
             
             basketForm.Activate();
@@ -77,19 +77,6 @@ namespace SuperMarket
         //adding a product;
         private void AddProductsIntoForm()
         {
-
-            //FOR TESTING PURPOSES
-            //*****temporary ****
-            //product data should be fetched from DB
-
-            for (int i = 0; i < 20; i++)
-            {
-                pds[i] = new Product(i.ToString(), "Milk", 0.99,102, "Milk.jpg");
-            }
-
-            // END TESTING
-
-
             //tring to open file
             StreamReader file;
             try
@@ -103,7 +90,7 @@ namespace SuperMarket
                 return;
             }
 
-            int size = int.Parse(file.ReadLine());
+            int size = Constants.FileMethods.GetFileSize(filePath);
             //adding products;
             int lastY = 0;
             for (int i = 1; i <= size; i++)
