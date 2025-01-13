@@ -202,11 +202,7 @@ namespace SuperMarket
         }
         private void parentProductMouseEnter(object sender, EventArgs e)
         {
-            Control control = sender as Control;
-            control.Parent.BackColor = Color.ForestGreen;
-            control.Parent.ForeColor = Color.White;
-            foreach (Control c in control.Parent.Controls)
-                c.ForeColor = Color.White;
+            productMouseEnter((sender as Control).Parent, e);
         }
         //for mouse leaving
         private void productMouseLeave(object sender, EventArgs e)
@@ -219,11 +215,7 @@ namespace SuperMarket
         }
         private void parentProductMouseLeave(object sender, EventArgs e)
         {
-            Control control = sender as Control;
-            control.Parent.BackColor = Color.White;
-            control.Parent.ForeColor= Color.Black;
-            foreach (Control c in control.Parent.Controls)
-                c.ForeColor = Color.ForestGreen;
+            productMouseLeave((sender as Control).Parent, e);
         }
 
 
