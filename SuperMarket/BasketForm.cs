@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace SuperMarket
 {
@@ -15,9 +17,10 @@ namespace SuperMarket
     {
         private Basket basket;
         private Form previousForm;
+        private User user;
 
         private bool backToMain = false;
-        public BasketForm(Form prev, Basket basket)
+        public BasketForm(Form prev, Basket basket, User user)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -25,6 +28,7 @@ namespace SuperMarket
             this.Size = new Size(Constants.WindowSizes.WIDTH, Constants.WindowSizes.HEIGHT);
 
             this.previousForm = prev;
+            this.user = user;
 
             this.basket = basket;
         }
@@ -36,7 +40,7 @@ namespace SuperMarket
 
         private void refreshForm()
         {
-            //changing the basket(0) and 0 Items 
+            //changing the label (0 items)
             itemsCounterLbl.Text = basket.Size().ToString() + " Items";
 
             //total prices changing
@@ -124,6 +128,82 @@ namespace SuperMarket
 
             this.productsPanel.Controls.Add(gb);
         }
+
+        //checkout btn
+        private void checkoutBtnCick(object sender, EventArgs e)
+        {
+            if (basket.getProducts().Count == 0)
+            {
+                MessageBox.Show("Empty Basket");
+                return;
+            }
+
+            if (!ValidateAllProducts())
+            {
+                MessageBox.Show("Invalid amount of quantity");
+                return;
+            }
+
+            //next receipt id to write (sequantial id)
+            string nextReceiptId = (Constants.FileMethods.GetFileSize(Constants.FileMethods.RECEIPT_FILE) + 1).ToString();
+
+            //writing a new receipt into receipt file;
+            InsertReceipt(nextReceiptId);
+
+            // m -> m relationship table
+            InsertEachProduct(nextReceiptId);
+
+            basket.clear();
+            refreshForm();
+            MessageBox.Show("Order Successful");
+            Console.WriteLine("Order successful");
+        }
+
+        private bool ValidateAllProducts()
+        {
+            string[] lines = File.ReadAllLines(Constants.FileMethods.PRODUCT_FILE);
+            foreach (Product p in basket.getProducts())
+            {
+                int id = int.Parse(p.getID());
+
+                string[] info = lines[id-1].Split(',');
+                if (info[0] == p.getID())
+                {
+                    int quantity = int.Parse(info[3]);
+                    //if we buying more quantity than we have
+                    if (p.getQuantity() > quantity) return false;
+
+
+                    quantity -= p.getQuantity();
+                    info[3] = quantity.ToString();
+                    lines[id-1] = info[0] + ',' + info[1] + ',' + info[2] + ',' + info[3] + ',' + info[4];
+                }
+                
+            }
+            //update all products quantity
+            File.WriteAllLines(Constants.FileMethods.PRODUCT_FILE, lines);
+            //all test passed
+            return true;
+        }
+
+        //insert new receipt into receipt file
+        private void InsertReceipt(string id)
+        {
+            StreamWriter file = File.AppendText(Constants.FileMethods.RECEIPT_FILE);
+            file.WriteLine(id + ',' + user.getID() + ',' + DateTime.Now.ToString("M/d/yyyy") + ',' + basket.getTotalPrice().ToString());
+            file.Close();
+        }
+
+        //insert which receipt has which product
+        private void InsertEachProduct(string id)
+        {
+            StreamWriter file = File.AppendText(Constants.FileMethods.RECEIPT_PRODUCT_FILE);
+            foreach (Product p in basket.getProducts())
+                file.WriteLine(p.getID() + ',' + id);
+            file.Close(); 
+        }
+
+
 
         //whenever the X(remove) btn in product groupbox in clicked
         private void productCancelClick(object sender, EventArgs e)
