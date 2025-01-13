@@ -1,25 +1,25 @@
-1,Milk,0.99,105,Milk.jpg
+1,Milk,0.99,103,Milk.jpg
 2,Yogurt,1.49,205,Yogurt.jpg
 3,Butter,0.79,56,Butter.jpg
-4,Eggs,2.29,32,Eggs.jpg
+4,Eggs,2.29,29,Eggs.jpg
 5,Ham,3.49,0,HAM.jpg
-6,Cheese,1.00,205,Cheese.jpg
-7,Orange Juice,0.25,12,OrangeJuice.jpg
+6,Cheese,1.00,204,Cheese.jpg
+7,Orange Juice,0.25,10,OrangeJuice.jpg
 8,Apple Juice,0.25,50,AppleJuice.jpg
 9,Chips,0.50,400,Chips.jpg
-10,Chocolate,0.79,89,Chocolate.png
+10,Chocolate,0.79,88,Chocolate.png
 11,Cookies,0.30,30,Cookies.jpg
-12,Biscuits,0.25,67,Biscuit.jpg
+12,Biscuits,0.25,63,Biscuit.jpg
 13,Bread,0.99,302,Bread.jpg
 14,Cereal,1.60,4,Cereal.jpg
 15,Honey,7.99,68,Honey.jpg
 16,Tea,1.49,74,Tea.jpg
-17,Coffee,3.49,31,Coffee.jpg
-18,Rice,2.99,120,Rice.jpg
+17,Coffee,3.49,30,Coffee.jpg
+18,Rice,2.99,117,Rice.jpg
 19,Sunflower Oil,5.89,45,SunflowerOil.jpg
 20,Olive Oil,11.20,71,OliveOil.jpg
 21,Ice Cream,0.89,200,IceCream.jpg
 22,Popsicle,0.49,61,Popsicle.jpg
 23,Chicken,2.89,300,Chicken.jpg
-24,Red Meat,9.99,1,Meat.jpg
+24,Red Meat,9.99,0,Meat.jpg
 25,Fish,14.59,2,Fish.jpg 

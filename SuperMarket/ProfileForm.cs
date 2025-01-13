@@ -76,6 +76,7 @@ namespace SuperMarket
             IDLbl.Location = new Point(Constants.ReceiptSizes.ID_LBL_X, Constants.ReceiptSizes.ID_LBL_Y);
             IDLbl.MouseEnter += ParentMouseEnter;
             IDLbl.MouseLeave += ParentMouseLeave;
+            IDLbl.Click += ParentMouseCick;
             gb.Controls.Add(IDLbl);
 
             //creating name LBL
@@ -85,6 +86,7 @@ namespace SuperMarket
             NameLbl.Location = new Point(Constants.ReceiptSizes.NAME_LBL_X, Constants.ReceiptSizes.NAME_LBL_Y);
             NameLbl.MouseEnter += ParentMouseEnter;
             NameLbl.MouseLeave += ParentMouseLeave;
+            NameLbl.Click += ParentMouseCick;
             gb.Controls.Add(NameLbl);
 
             //creating date lbl
@@ -94,6 +96,7 @@ namespace SuperMarket
             DateLbl.Location = new Point(Constants.ReceiptSizes.DATE_LBL_X, Constants.ReceiptSizes.DATE_LBL_Y);
             DateLbl.MouseEnter += ParentMouseEnter;
             DateLbl.MouseLeave += ParentMouseLeave;
+            DateLbl.Click += ParentMouseCick;
             gb.Controls.Add(DateLbl);
 
             //creating total price lbl
@@ -104,17 +107,20 @@ namespace SuperMarket
             PriceLbl.Location = new Point(Constants.ReceiptSizes.PRICE_LBL_X, Constants.ReceiptSizes.PRICE_LBL_Y);
             PriceLbl.MouseEnter += ParentMouseEnter;
             PriceLbl.MouseLeave += ParentMouseLeave;
+            PriceLbl.Click += ParentMouseCick;
             gb.Controls.Add(PriceLbl);
 
             gb.MouseEnter += ReceiptMouseEnter;
             gb.MouseLeave += ReceiptMouseLeave;
+            gb.Click += ReceiptMouseClick;
             this.ReceiptsPanel.Controls.Add(gb);
         }
 
         //whenever receipt is clicked
         private void ReceiptMouseClick(object sender, EventArgs e)
         {
-
+            ReceiptInfo form = new ReceiptInfo((sender as Control).Name);
+            form.Show();
         }
         private void ParentMouseCick(object sender, EventArgs e)
         {

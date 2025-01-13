@@ -199,7 +199,7 @@ namespace SuperMarket
         {
             StreamWriter file = File.AppendText(Constants.FileMethods.RECEIPT_PRODUCT_FILE);
             foreach (Product p in basket.getProducts())
-                file.WriteLine(p.getID() + ',' + id);
+                file.WriteLine(p.getID() + ',' + id + ',' + p.getQuantity());
             file.Close(); 
         }
 
