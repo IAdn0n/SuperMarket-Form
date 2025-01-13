@@ -29,6 +29,12 @@ namespace SuperMarket
 
             Console.WriteLine("REMOVE SIZE: " + Size().ToString());
         }
+            
+        public void clear()
+        {
+            products.Clear();
+            totalPrice = 0;
+        }
 
         public int Size() { return  products.Count; }
         public double getTotalPrice() { return totalPrice;}
