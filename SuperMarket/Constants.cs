@@ -109,6 +109,29 @@ namespace SuperMarket
             }
         }
 
+        internal static class ReceiptSizes
+        {
+            public const int RECEIPT_START_X = 5;
+            public const int RECEIPT_START_Y = 12;
+            public const int RECEIPT_WIDTH = 720;
+            public const int RECEIPT_HEIGHT = 100;
+            public const int RECEIPT_Y_PADDING = 20;
+            public const int RECEIPT_FONT_SIZE = 14;
+
+
+            public const int ID_LBL_X = 6;
+            public const int ID_LBL_Y = 16;
+
+            public const int NAME_LBL_X = 6;
+            public const int NAME_LBL_Y = 40;
+
+            public const int DATE_LBL_X = 6;
+            public const int DATE_LBL_Y = 64;
+
+            public const int PRICE_LBL_X = 626;
+            public const int PRICE_LBL_Y = 64;
+        }
+
     }
 
     
