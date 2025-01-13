@@ -17,6 +17,7 @@ namespace SuperMarket
     {
         private Form previousForm;
         private Basket basket;
+        private User user;
 
         private const string filePath = Constants.FileMethods.PRODUCT_FILE;
 
@@ -25,7 +26,7 @@ namespace SuperMarket
         //
 
         private bool backToLogin = false;
-        public MainForm(Form prev)
+        public MainForm(Form prev, User user)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -33,9 +34,10 @@ namespace SuperMarket
             this.Size = new Size(Constants.WindowSizes.WIDTH, Constants.WindowSizes.HEIGHT);
 
             this.previousForm = prev;
-
+            this.user = user;
 
             basket = new Basket();
+           
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -59,6 +61,16 @@ namespace SuperMarket
             
             basketForm.Activate();
             basketForm.Show();
+        }
+
+        private void ProfileBtn_Cick(object sender, EventArgs e)
+        {
+            ProfileForm profileForm = new ProfileForm(this, user);
+            this.Hide();
+
+            profileForm.Activate();
+            profileForm.Show();
+
         }
 
 
