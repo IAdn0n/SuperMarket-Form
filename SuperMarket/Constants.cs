@@ -96,6 +96,8 @@ namespace SuperMarket
         {
             public const string USER_FILE = "UsersFile.txt";
             public const string PRODUCT_FILE = "ProductsFile.txt";
+            public const string RECEIPT_FILE = "ReceiptsFile.txt";
+            public const string RECEIPT_PRODUCT_FILE = "ReceiptProductFile.txt";
             public static int GetFileSize(string filePath)
             {
                 int lineCount = 0;
