@@ -93,7 +93,7 @@ namespace SuperMarket
             PriceLbl.Location = new Point(Constants.ReceiptSizes.PRICE_LBL_X, Constants.ReceiptSizes.PRICE_LBL_Y);
             gb.Controls.Add(PriceLbl);
 
-            this.Controls.Add(gb);
+            this.ReceiptsPanel.Controls.Add(gb);
         }
 
         //methods for btn hovering
