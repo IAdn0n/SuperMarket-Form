@@ -96,17 +96,28 @@ namespace SuperMarket
             for (int i = 1; i <= size; i++)
             {
                 string[] words = file.ReadLine().Split(',');
-                
+
                 int xi = ((i % 5 == 0) ? 5 : i % 5);
                 int x = Constants.ProductSizes.START_X;
                 x += Constants.ProductSizes.PADDING_X * (xi - 1) + Constants.ProductSizes.WIDTH * (xi - 1);
-                
+
                 int yi = (int)(Math.Ceiling((decimal)i / 5));
                 int y = Constants.ProductSizes.START_Y;
-                y += Constants.ProductSizes.PADDING_Y * (yi-1) + Constants.ProductSizes.HEIGHT * (yi - 1);
+                y += Constants.ProductSizes.PADDING_Y * (yi - 1) + Constants.ProductSizes.HEIGHT * (yi - 1);
 
                 Product p = new Product(words[0], words[1], double.Parse(words[2]), int.Parse(words[3]), words[4]);
                 GroupBox gb = Product.addProduct(p, x, y);
+
+                //if its out of stock
+                if (p.getQuantity() == 0) {
+                    gb.Enabled = false;
+                    Label outOfStock = new Label();
+                    outOfStock.Text = "Out Of Stock";
+                    outOfStock.ForeColor = Color.Red;
+                    outOfStock.Font = new Font("", 14);
+                    outOfStock.Location = new Point(x + 20, y + 20);
+                    this.productsPanel.Controls.Add(outOfStock);
+                }
 
                 gb.MouseEnter += productMouseEnter;
                 gb.MouseLeave += productMouseLeave;
@@ -146,7 +157,7 @@ namespace SuperMarket
             Control c = sender as Control;
             //fetching product's information
             int id = int.Parse(c.Name);
-            string[] words = File.ReadLines(filePath).Skip(id).Take(1).First().Split(',');
+            string[] words = File.ReadLines(filePath).Skip(id-1).Take(1).First().Split(',');
             addProduct productForm = new addProduct(new Product(words[0], words[1], double.Parse(words[2]), int.Parse(words[3]), words[4]),  basket);
 
             //redraw the form after dialog completion
