@@ -37,7 +37,6 @@ namespace SuperMarket
         private void refreshForm()
         {
             //changing the basket(0) and 0 Items 
-            Constants.BasketMethods.CHANGE_TEXT(basketBtn, basket.Size());
             itemsCounterLbl.Text = basket.Size().ToString() + " Items";
 
             //total prices changing
