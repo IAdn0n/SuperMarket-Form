@@ -12,3 +12,4 @@ C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.MainForm.resources
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.loginForm.resources
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.addProduct.resources
 C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.BasketForm.resources
+C:\Dev\SuperMarket\SuperMarket\obj\Debug\SuperMarket.ProfileForm.resources

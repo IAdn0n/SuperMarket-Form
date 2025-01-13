@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.backBtn = new System.Windows.Forms.Button();
-            this.basketBtn = new System.Windows.Forms.Button();
-            this.ShopBtn = new System.Windows.Forms.Button();
-            this.ProfileBtn = new System.Windows.Forms.Button();
             this.usernameLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ReceiptsPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // backBtn
@@ -47,43 +45,9 @@
             this.backBtn.TabIndex = 8;
             this.backBtn.Text = "<-------";
             this.backBtn.UseVisualStyleBackColor = true;
-            // 
-            // basketBtn
-            // 
-            this.basketBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.basketBtn.Location = new System.Drawing.Point(585, 15);
-            this.basketBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.basketBtn.Name = "basketBtn";
-            this.basketBtn.Size = new System.Drawing.Size(103, 46);
-            this.basketBtn.TabIndex = 11;
-            this.basketBtn.Text = "Basket (0)";
-            this.basketBtn.UseVisualStyleBackColor = true;
-            // 
-            // ShopBtn
-            // 
-            this.ShopBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShopBtn.Location = new System.Drawing.Point(703, 15);
-            this.ShopBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.ShopBtn.Name = "ShopBtn";
-            this.ShopBtn.Size = new System.Drawing.Size(103, 46);
-            this.ShopBtn.TabIndex = 12;
-            this.ShopBtn.Text = "Shop";
-            this.ShopBtn.UseVisualStyleBackColor = true;
-            // 
-            // ProfileBtn
-            // 
-            this.ProfileBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ProfileBtn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.ProfileBtn.FlatAppearance.BorderSize = 10;
-            this.ProfileBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ProfileBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfileBtn.Location = new System.Drawing.Point(821, 15);
-            this.ProfileBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.ProfileBtn.Name = "ProfileBtn";
-            this.ProfileBtn.Size = new System.Drawing.Size(103, 46);
-            this.ProfileBtn.TabIndex = 13;
-            this.ProfileBtn.Text = "Profile";
-            this.ProfileBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            this.backBtn.MouseEnter += new System.EventHandler(this.BtnEnterRed);
+            this.backBtn.MouseLeave += new System.EventHandler(this.BtnLeave);
             // 
             // usernameLbl
             // 
@@ -110,11 +74,21 @@
             // ReceiptsPanel
             // 
             this.ReceiptsPanel.AutoScroll = true;
-            this.ReceiptsPanel.Location = new System.Drawing.Point(36, 153);
+            this.ReceiptsPanel.Location = new System.Drawing.Point(36, 174);
             this.ReceiptsPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ReceiptsPanel.Name = "ReceiptsPanel";
-            this.ReceiptsPanel.Size = new System.Drawing.Size(876, 426);
+            this.ReceiptsPanel.Size = new System.Drawing.Size(876, 405);
             this.ReceiptsPanel.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(37, 148);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 24);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Orders";
             // 
             // ProfileForm
             // 
@@ -122,15 +96,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(940, 599);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ReceiptsPanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.usernameLbl);
-            this.Controls.Add(this.ProfileBtn);
-            this.Controls.Add(this.ShopBtn);
-            this.Controls.Add(this.basketBtn);
             this.Controls.Add(this.backBtn);
             this.Name = "ProfileForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profile";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProfileForm_FormClosed);
             this.Load += new System.EventHandler(this.ProfileForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,11 +114,9 @@
         #endregion
 
         private System.Windows.Forms.Button backBtn;
-        private System.Windows.Forms.Button basketBtn;
-        private System.Windows.Forms.Button ShopBtn;
-        private System.Windows.Forms.Button ProfileBtn;
         private System.Windows.Forms.Label usernameLbl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel ReceiptsPanel;
+        private System.Windows.Forms.Label label1;
     }
 }

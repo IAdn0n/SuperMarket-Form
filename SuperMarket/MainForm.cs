@@ -108,17 +108,6 @@ namespace SuperMarket
                 Product p = new Product(words[0], words[1], double.Parse(words[2]), int.Parse(words[3]), words[4]);
                 GroupBox gb = Product.addProduct(p, x, y);
 
-                //if its out of stock
-                if (p.getQuantity() == 0) {
-                    gb.Enabled = false;
-                    Label outOfStock = new Label();
-                    outOfStock.Text = "Out Of Stock";
-                    outOfStock.ForeColor = Color.Red;
-                    outOfStock.Font = new Font("", 14);
-                    outOfStock.Location = new Point(x + 20, y + 20);
-                    this.productsPanel.Controls.Add(outOfStock);
-                }
-
                 gb.MouseEnter += productMouseEnter;
                 gb.MouseLeave += productMouseLeave;
 
@@ -129,7 +118,20 @@ namespace SuperMarket
                     c.MouseLeave += parentProductMouseLeave;
                     c.Click += parentProductClicked;
                 }
-                
+
+                //if products quantity get to 0
+                if (p.getQuantity() == 0)
+                {
+                    gb.Enabled = false;
+                    Label outOfStock = new Label();
+                    outOfStock.Text = "Out Of Stock";
+                    outOfStock.ForeColor = Color.Red;
+                    outOfStock.BackColor = Color.Transparent;
+                    outOfStock.Font = new Font("", 10);
+                    outOfStock.Location = new Point(x + 20, y + 20);
+                    this.productsPanel.Controls.Add(outOfStock);
+                }
+
                 this.productsPanel.Controls.Add(gb);
                 
                 Console.WriteLine(x + " " + y);

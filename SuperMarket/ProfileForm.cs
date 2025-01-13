@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -37,7 +38,7 @@ namespace SuperMarket
             StreamReader file;
             try
             {
-                file = File.OpenText(Constants.FileMethods.PRODUCT_FILE);
+                file = File.OpenText(Constants.FileMethods.RECEIPT_FILE);
             }catch(Exception ex) { MessageBox.Show(ex.Message); return; }
 
 
@@ -47,11 +48,14 @@ namespace SuperMarket
                 string[] words = file.ReadLine().Split(',');
                 if (words[1] == user.getID())
                 {
-                    CreateReceiptGb(words[0], words[1], words[2], words[3], x, y);
+                    CreateReceiptGb(words[0], User.getName(words[1]), words[2], words[3], x, y);
                     y += Constants.ReceiptSizes.RECEIPT_HEIGHT + Constants.ReceiptSizes.RECEIPT_Y_PADDING;
+
+                    Console.WriteLine("Receipt rendered successfully");
                 }
 
             }
+            file.Close();
         }
 
         private void CreateReceiptGb(string id, string name, string date, string total, int x, int y)
@@ -87,12 +91,12 @@ namespace SuperMarket
 
             //creating total price lbl
             Label PriceLbl = new Label();
-            PriceLbl.Text = total;
+            PriceLbl.Text = '$' + total;
             PriceLbl.Font = fnt;
             PriceLbl.ForeColor = Color.ForestGreen;
             PriceLbl.Location = new Point(Constants.ReceiptSizes.PRICE_LBL_X, Constants.ReceiptSizes.PRICE_LBL_Y);
             gb.Controls.Add(PriceLbl);
-
+            
             this.ReceiptsPanel.Controls.Add(gb);
         }
 

@@ -31,9 +31,6 @@
             this.backBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.basketBtn = new System.Windows.Forms.Button();
-            this.ShopBtn = new System.Windows.Forms.Button();
-            this.ProfileBtn = new System.Windows.Forms.Button();
             this.SummaryGroupBox = new System.Windows.Forms.GroupBox();
             this.checkoutBtn = new System.Windows.Forms.Button();
             this.totalLbl = new System.Windows.Forms.Label();
@@ -50,9 +47,10 @@
             // backBtn
             // 
             this.backBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBtn.Location = new System.Drawing.Point(54, 23);
+            this.backBtn.Location = new System.Drawing.Point(36, 15);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(155, 71);
+            this.backBtn.Size = new System.Drawing.Size(103, 46);
             this.backBtn.TabIndex = 7;
             this.backBtn.Text = "<-------";
             this.backBtn.UseVisualStyleBackColor = true;
@@ -64,62 +62,23 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 123);
+            this.label1.Location = new System.Drawing.Point(33, 80);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 69);
+            this.label1.Size = new System.Drawing.Size(142, 46);
             this.label1.TabIndex = 8;
             this.label1.Text = "Basket";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 192);
+            this.label2.Location = new System.Drawing.Point(33, 125);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(624, 40);
+            this.label2.Size = new System.Drawing.Size(376, 26);
             this.label2.TabIndex = 9;
             this.label2.Text = "---------------------------------------------------------------------------------" +
     "------------------------------------------\r\n\r\n";
-            // 
-            // basketBtn
-            // 
-            this.basketBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.basketBtn.Location = new System.Drawing.Point(878, 23);
-            this.basketBtn.Name = "basketBtn";
-            this.basketBtn.Size = new System.Drawing.Size(155, 71);
-            this.basketBtn.TabIndex = 10;
-            this.basketBtn.Text = "Basket (0)";
-            this.basketBtn.UseVisualStyleBackColor = true;
-            this.basketBtn.MouseEnter += new System.EventHandler(this.BtnEnter);
-            this.basketBtn.MouseLeave += new System.EventHandler(this.BtnLeave);
-            // 
-            // ShopBtn
-            // 
-            this.ShopBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShopBtn.Location = new System.Drawing.Point(1055, 23);
-            this.ShopBtn.Name = "ShopBtn";
-            this.ShopBtn.Size = new System.Drawing.Size(155, 71);
-            this.ShopBtn.TabIndex = 11;
-            this.ShopBtn.Text = "Shop";
-            this.ShopBtn.UseVisualStyleBackColor = true;
-            this.ShopBtn.Click += new System.EventHandler(this.shopBtn_Clicked);
-            this.ShopBtn.MouseEnter += new System.EventHandler(this.BtnEnter);
-            this.ShopBtn.MouseLeave += new System.EventHandler(this.BtnLeave);
-            // 
-            // ProfileBtn
-            // 
-            this.ProfileBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ProfileBtn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.ProfileBtn.FlatAppearance.BorderSize = 10;
-            this.ProfileBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ProfileBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfileBtn.Location = new System.Drawing.Point(1231, 23);
-            this.ProfileBtn.Name = "ProfileBtn";
-            this.ProfileBtn.Size = new System.Drawing.Size(155, 71);
-            this.ProfileBtn.TabIndex = 12;
-            this.ProfileBtn.Text = "Profile";
-            this.ProfileBtn.UseVisualStyleBackColor = false;
-            this.ProfileBtn.MouseEnter += new System.EventHandler(this.BtnEnter);
-            this.ProfileBtn.MouseLeave += new System.EventHandler(this.BtnLeave);
             // 
             // SummaryGroupBox
             // 
@@ -132,9 +91,11 @@
             this.SummaryGroupBox.Controls.Add(this.label4);
             this.SummaryGroupBox.Controls.Add(this.label3);
             this.SummaryGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SummaryGroupBox.Location = new System.Drawing.Point(958, 235);
+            this.SummaryGroupBox.Location = new System.Drawing.Point(639, 153);
+            this.SummaryGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SummaryGroupBox.Name = "SummaryGroupBox";
-            this.SummaryGroupBox.Size = new System.Drawing.Size(353, 332);
+            this.SummaryGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SummaryGroupBox.Size = new System.Drawing.Size(235, 216);
             this.SummaryGroupBox.TabIndex = 14;
             this.SummaryGroupBox.TabStop = false;
             this.SummaryGroupBox.Text = "Order Summary";
@@ -142,12 +103,14 @@
             // checkoutBtn
             // 
             this.checkoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkoutBtn.Location = new System.Drawing.Point(35, 260);
+            this.checkoutBtn.Location = new System.Drawing.Point(23, 169);
+            this.checkoutBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkoutBtn.Name = "checkoutBtn";
-            this.checkoutBtn.Size = new System.Drawing.Size(260, 42);
+            this.checkoutBtn.Size = new System.Drawing.Size(173, 27);
             this.checkoutBtn.TabIndex = 6;
             this.checkoutBtn.Text = "Continue Checkout";
             this.checkoutBtn.UseVisualStyleBackColor = true;
+            this.checkoutBtn.Click += new System.EventHandler(this.checkoutBtnCick);
             this.checkoutBtn.MouseEnter += new System.EventHandler(this.BtnEnter);
             this.checkoutBtn.MouseLeave += new System.EventHandler(this.BtnLeave);
             // 
@@ -155,9 +118,10 @@
             // 
             this.totalLbl.AutoSize = true;
             this.totalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLbl.Location = new System.Drawing.Point(236, 202);
+            this.totalLbl.Location = new System.Drawing.Point(157, 131);
+            this.totalLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLbl.Name = "totalLbl";
-            this.totalLbl.Size = new System.Drawing.Size(34, 25);
+            this.totalLbl.Size = new System.Drawing.Size(24, 17);
             this.totalLbl.TabIndex = 5;
             this.totalLbl.Text = "10";
             // 
@@ -165,9 +129,10 @@
             // 
             this.taxLbl.AutoSize = true;
             this.taxLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxLbl.Location = new System.Drawing.Point(236, 147);
+            this.taxLbl.Location = new System.Drawing.Point(157, 96);
+            this.taxLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.taxLbl.Name = "taxLbl";
-            this.taxLbl.Size = new System.Drawing.Size(34, 25);
+            this.taxLbl.Size = new System.Drawing.Size(24, 17);
             this.taxLbl.TabIndex = 4;
             this.taxLbl.Text = "10";
             // 
@@ -175,9 +140,10 @@
             // 
             this.subtotalLbl.AutoSize = true;
             this.subtotalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalLbl.Location = new System.Drawing.Point(236, 95);
+            this.subtotalLbl.Location = new System.Drawing.Point(157, 62);
+            this.subtotalLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.subtotalLbl.Name = "subtotalLbl";
-            this.subtotalLbl.Size = new System.Drawing.Size(34, 25);
+            this.subtotalLbl.Size = new System.Drawing.Size(24, 17);
             this.subtotalLbl.TabIndex = 3;
             this.subtotalLbl.Text = "10";
             // 
@@ -185,9 +151,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(58, 202);
+            this.label5.Location = new System.Drawing.Point(39, 131);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 25);
+            this.label5.Size = new System.Drawing.Size(44, 17);
             this.label5.TabIndex = 2;
             this.label5.Text = "Total:";
             // 
@@ -195,9 +162,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(68, 147);
+            this.label4.Location = new System.Drawing.Point(45, 96);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 25);
+            this.label4.Size = new System.Drawing.Size(35, 17);
             this.label4.TabIndex = 1;
             this.label4.Text = "Tax:";
             // 
@@ -205,44 +173,45 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 95);
+            this.label3.Location = new System.Drawing.Point(20, 62);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 25);
+            this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Subtotal:";
             // 
             // itemsCounterLbl
             // 
             this.itemsCounterLbl.AutoSize = true;
-            this.itemsCounterLbl.Location = new System.Drawing.Point(258, 163);
+            this.itemsCounterLbl.Location = new System.Drawing.Point(172, 106);
+            this.itemsCounterLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.itemsCounterLbl.Name = "itemsCounterLbl";
-            this.itemsCounterLbl.Size = new System.Drawing.Size(62, 20);
+            this.itemsCounterLbl.Size = new System.Drawing.Size(41, 13);
             this.itemsCounterLbl.TabIndex = 15;
             this.itemsCounterLbl.Text = "0 Items";
             // 
             // productsPanel
             // 
             this.productsPanel.AutoScroll = true;
-            this.productsPanel.Location = new System.Drawing.Point(54, 235);
+            this.productsPanel.Location = new System.Drawing.Point(36, 153);
+            this.productsPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.productsPanel.Name = "productsPanel";
-            this.productsPanel.Size = new System.Drawing.Size(857, 662);
+            this.productsPanel.Size = new System.Drawing.Size(571, 430);
             this.productsPanel.TabIndex = 16;
             // 
             // BasketForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1410, 922);
+            this.ClientSize = new System.Drawing.Size(940, 599);
             this.Controls.Add(this.productsPanel);
             this.Controls.Add(this.itemsCounterLbl);
             this.Controls.Add(this.SummaryGroupBox);
-            this.Controls.Add(this.ProfileBtn);
-            this.Controls.Add(this.ShopBtn);
-            this.Controls.Add(this.basketBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.backBtn);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BasketForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Basket";
@@ -260,9 +229,6 @@
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button basketBtn;
-        private System.Windows.Forms.Button ShopBtn;
-        private System.Windows.Forms.Button ProfileBtn;
         private System.Windows.Forms.GroupBox SummaryGroupBox;
         private System.Windows.Forms.Label itemsCounterLbl;
         private System.Windows.Forms.Button checkoutBtn;

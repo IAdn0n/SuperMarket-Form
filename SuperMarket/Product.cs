@@ -36,7 +36,10 @@ namespace SuperMarket
             gp.BackColor = Color.White;
             gp.Text = p.name;
             gp.Name = p.ID;
-            gp.Font = new Font("", Constants.ProductSizes.FONT_SIZE, FontStyle.Bold);
+
+            int fntSize = Constants.ProductSizes.FONT_SIZE;
+            if (p.name.Length > 8) fntSize-=4;
+            gp.Font = new Font("", fntSize, FontStyle.Bold);
 
             //creating price label
             Label price = new Label();

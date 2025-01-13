@@ -29,6 +29,7 @@ namespace SuperMarket
             productPriceLbl.Text = '$' + product.getPrice().ToString();
             TotalLbl.Text = productPriceLbl.Text;
             productPictureBox.ImageLocation = product.getImagePath();
+            if (product.getQuantity() == 1) incrementbtn.Enabled = false;
         }
 
 
