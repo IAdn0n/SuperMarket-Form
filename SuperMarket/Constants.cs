@@ -12,28 +12,28 @@ namespace SuperMarket
     public static class Constants
     {
         internal static class WindowSizes { 
-            public static readonly int WIDTH = 960;
-            public static readonly int HEIGHT = 640;
+            public const int WIDTH = 960;
+            public const int HEIGHT = 640;
         }
 
         internal static class ProductSizes
         {
-            public static readonly int WIDTH = 133;
-            public static readonly int HEIGHT = 131;
-            public static readonly int PADDING_X = 30;
-            public static readonly int PADDING_Y = 50;
-            public static readonly int START_X = 20;
-            public static readonly int START_Y = 16;
-            public static readonly int FONT_SIZE = 10;
+            public const int WIDTH = 133;
+            public const int HEIGHT = 131;
+            public const int PADDING_X = 30;
+            public const int PADDING_Y = 50;
+            public const int START_X = 20;
+            public const int START_Y = 16;
+            public const int FONT_SIZE = 10;
 
-            public static readonly int IMAGE_WIDTH = 120;
-            public static readonly int IMAGE_HEIGHT = 90;
-            public static readonly int IMAGE_X = 6;
-            public static readonly int IMAGE_Y = 31;
+            public const int IMAGE_WIDTH = 120;
+            public const int IMAGE_HEIGHT = 90;
+            public const int IMAGE_X = 6;
+            public const int IMAGE_Y = 31;
 
 
-            public static readonly int PRICE_X = 75;
-            public static readonly int PRICE_Y = 0;
+            public const int PRICE_X = 75;
+            public const int PRICE_Y = 0;
             
         }
 
@@ -59,33 +59,33 @@ namespace SuperMarket
 
         internal static class BasketMethods
         {
-            public static readonly int PRODUCT_X = 8;
-            public static readonly int PRODUCT_Y = 18;
-            public static readonly int PRODUCT_WIDTH = 510;
-            public static readonly int PRODUCT_HEIGHT = 95;
-            public static readonly int PRODUCT_FONT_SIZE = 12;
+            public const int PRODUCT_X = 8;
+            public const int PRODUCT_Y = 18;
+            public const int PRODUCT_WIDTH = 510;
+            public const int PRODUCT_HEIGHT = 95;
+            public const int PRODUCT_FONT_SIZE = 12;
 
-            public static readonly int PRODUCT_PICTURE_X = 10;
-            public static readonly int PRODUCT_PICTURE_Y = 16;
-            public static readonly int PRODUCT_PICTURE_WIDTH = 72;
-            public static readonly int PRODUCT_PICTURE_HEIGHT = 68;
+            public const int PRODUCT_PICTURE_X = 10;
+            public const int PRODUCT_PICTURE_Y = 16;
+            public const int PRODUCT_PICTURE_WIDTH = 72;
+            public const int PRODUCT_PICTURE_HEIGHT = 68;
 
-            public static readonly int PRODUCT_NAME_X = 86;
-            public static readonly int PRODUCT_NAME_Y = 14;
+            public const int PRODUCT_NAME_X = 86;
+            public const int PRODUCT_NAME_Y = 14;
 
-            public static readonly int PRODUCT_PRICE_X = 86;
-            public static readonly int PRODUCT_PRICE_Y = 36;
+            public const int PRODUCT_PRICE_X = 86;
+            public const int PRODUCT_PRICE_Y = 36;
 
-            public static readonly int PRODUCT_QUANTITY_X = 86;
-            public static readonly int PRODUCT_QUANTITY_Y = 66;
+            public const int PRODUCT_QUANTITY_X = 86;
+            public const int PRODUCT_QUANTITY_Y = 66;
 
-            public static readonly int PRODUCT_TOTAL_PRICE_X = 436;
-            public static readonly int PRODUCT_TOTAL_PRICE_Y = 66;
+            public const int PRODUCT_TOTAL_PRICE_X = 436;
+            public const int PRODUCT_TOTAL_PRICE_Y = 66;
 
-            public static readonly int PRODUCT_CANCEL_BTN_X = 480;
-            public static readonly int PRODUCT_CANCEL_BTN_Y = 8;
-            public static readonly int PRODUCT_CANCEL_BTN_WIDTH = 24;
-            public static readonly int PRODUCT_CANCEL_BTN_HEIGHT = 19;
+            public const int PRODUCT_CANCEL_BTN_X = 480;
+            public const int PRODUCT_CANCEL_BTN_Y = 8;
+            public const int PRODUCT_CANCEL_BTN_WIDTH = 24;
+            public const int PRODUCT_CANCEL_BTN_HEIGHT = 19;
             public static void CHANGE_TEXT(Button basketBtn, int num)
             {
                 basketBtn.Text = "Basket (" + num.ToString() + ')';
@@ -94,6 +94,8 @@ namespace SuperMarket
 
         internal static class FileMethods
         {
+            public const string USER_FILE = "UsersFile.txt";
+            public const string PRODUCT_FILE = "ProductsFile.txt";
             public static int GetFileSize(string filePath)
             {
                 int lineCount = 0;

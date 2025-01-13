@@ -14,7 +14,7 @@ namespace SuperMarket
 {
     public partial class loginForm : Form
     {
-        private const string filePath = "UsersFile.txt";
+        private const string filePath = Constants.FileMethods.USER_FILE;
         public loginForm()
         {
             InitializeComponent();

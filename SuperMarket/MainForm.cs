@@ -18,7 +18,7 @@ namespace SuperMarket
         private Form previousForm;
         private Basket basket;
 
-        private const string filePath = "ProductsFile.txt";
+        private const string filePath = Constants.FileMethods.PRODUCT_FILE;
 
         //TEMPORARY***********
         private Product[] pds = new Product[20];

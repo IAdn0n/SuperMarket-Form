@@ -18,7 +18,7 @@ namespace SuperMarket
         private Form previousForm;
         private bool toLogin = false;
 
-        private const string filePath = "UsersFile.txt";
+        private const string filePath = Constants.FileMethods.USER_FILE;
         public registerForm(Form previousLogin)
         {
             InitializeComponent();
