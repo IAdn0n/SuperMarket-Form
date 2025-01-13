@@ -69,7 +69,7 @@ namespace SuperMarket
                 {
                     foundUser = true;
                     if (info[2] == hashedPass)
-                        openMainForm();
+                        openMainForm(info[0], info[1]);
                     else
                         MessageBox.Show("Wrong Password");
                     file.Close();
@@ -83,11 +83,11 @@ namespace SuperMarket
             //END TODO
         }
 
-        private void openMainForm()
+        private void openMainForm(string id, string username)
         {
             Console.WriteLine("login successful");
 
-            MainForm mainForm = new MainForm(this);
+            MainForm mainForm = new MainForm(this, new User(id, username));
 
             mainForm.Activate();
             mainForm.Show();
