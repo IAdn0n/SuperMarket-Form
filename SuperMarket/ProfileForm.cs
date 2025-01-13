@@ -61,6 +61,7 @@ namespace SuperMarket
         private void CreateReceiptGb(string id, string name, string date, string total, int x, int y)
         {
             GroupBox gb = new GroupBox();
+            gb.Name = id;
             gb.Size = new Size(Constants.ReceiptSizes.RECEIPT_WIDTH, Constants.ReceiptSizes.RECEIPT_HEIGHT);
             gb.Location = new Point(x, y);
             gb.BackColor = Color.White;
@@ -73,6 +74,8 @@ namespace SuperMarket
             IDLbl.Text = id;
             IDLbl.Font = fnt;
             IDLbl.Location = new Point(Constants.ReceiptSizes.ID_LBL_X, Constants.ReceiptSizes.ID_LBL_Y);
+            IDLbl.MouseEnter += ParentMouseEnter;
+            IDLbl.MouseLeave += ParentMouseLeave;
             gb.Controls.Add(IDLbl);
 
             //creating name LBL
@@ -80,6 +83,8 @@ namespace SuperMarket
             NameLbl.Text = name;
             NameLbl.Font = fnt;
             NameLbl.Location = new Point(Constants.ReceiptSizes.NAME_LBL_X, Constants.ReceiptSizes.NAME_LBL_Y);
+            NameLbl.MouseEnter += ParentMouseEnter;
+            NameLbl.MouseLeave += ParentMouseLeave;
             gb.Controls.Add(NameLbl);
 
             //creating date lbl
@@ -87,6 +92,8 @@ namespace SuperMarket
             DateLbl.Text = date;
             DateLbl.Font = fnt;
             DateLbl.Location = new Point(Constants.ReceiptSizes.DATE_LBL_X, Constants.ReceiptSizes.DATE_LBL_Y);
+            DateLbl.MouseEnter += ParentMouseEnter;
+            DateLbl.MouseLeave += ParentMouseLeave;
             gb.Controls.Add(DateLbl);
 
             //creating total price lbl
@@ -95,10 +102,56 @@ namespace SuperMarket
             PriceLbl.Font = fnt;
             PriceLbl.ForeColor = Color.ForestGreen;
             PriceLbl.Location = new Point(Constants.ReceiptSizes.PRICE_LBL_X, Constants.ReceiptSizes.PRICE_LBL_Y);
+            PriceLbl.MouseEnter += ParentMouseEnter;
+            PriceLbl.MouseLeave += ParentMouseLeave;
             gb.Controls.Add(PriceLbl);
-            
+
+            gb.MouseEnter += ReceiptMouseEnter;
+            gb.MouseLeave += ReceiptMouseLeave;
             this.ReceiptsPanel.Controls.Add(gb);
         }
+
+        //whenever receipt is clicked
+        private void ReceiptMouseClick(object sender, EventArgs e)
+        {
+
+        }
+        private void ParentMouseCick(object sender, EventArgs e)
+        {
+            ReceiptMouseClick((sender as Control).Parent, e);
+        }
+
+
+        //for receipt hovering
+        //for mouse Entering
+        private void ReceiptMouseEnter(object sender, EventArgs e)
+        {
+            Control control = sender as Control;
+            control.BackColor = Color.ForestGreen;
+            control.ForeColor = Color.White;
+            foreach (Control c in control.Controls)
+                c.ForeColor = Color.White;
+        }
+        private void ParentMouseEnter(object sender, EventArgs e)
+        {
+            ReceiptMouseEnter((sender as Control).Parent, e);
+        }
+        //for mouse leaving
+        private void ReceiptMouseLeave(object sender, EventArgs e)
+        {
+            Control control = sender as Control;
+            control.BackColor = Color.White;
+            control.ForeColor = Color.Black;
+            foreach (Control c in control.Controls)
+                c.ForeColor = Color.Black;
+            control.Controls[Controls.Count - 2].ForeColor = Color.ForestGreen;
+        }
+        private void ParentMouseLeave(object sender, EventArgs e)
+        {
+            ReceiptMouseLeave((sender as Control).Parent, e);
+        }
+
+
 
         //methods for btn hovering
         private void BtnLeave(object sender, EventArgs e)
